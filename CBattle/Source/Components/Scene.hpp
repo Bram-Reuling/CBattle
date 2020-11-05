@@ -2,6 +2,7 @@
 
 #include <string>
 #include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/Text.hpp>
 
 #include "GameObject.hpp"
 
@@ -22,4 +23,9 @@ public:
 	void Update();
 	void Render(sf::RenderWindow& window);
 	std::string GetIdentifier() const;
+
+	sf::Font font;
+	sf::Color darkColor;
+	sf::Color darkGreyColor;
+	sf::Color lightGreyColor;
 };

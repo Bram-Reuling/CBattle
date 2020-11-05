@@ -6,6 +6,7 @@
 ///
 
 #include <SFML/Graphics.hpp>
+#include <vector>
 
 #include "Components/Scene.hpp"
 #include "Components/SpriteObject.hpp"
@@ -16,11 +17,14 @@ int main()
 {
 	// Setup of window
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "CBattle");
-
-	StartScreen startScreen("StartScreen");
-
 	SceneHandler handler;
+
+	// Scenes setup
+	StartScreen startScreen("StartScreen", window, handler);
+	Scene startScreen2("Test");
+	
 	handler.AddScene(startScreen);
+	handler.AddScene(startScreen2);
 
 	auto counter = 0;
 	// Check if the window is open.
@@ -35,11 +39,8 @@ int main()
 			case sf::Event::EventType::Closed:
 				window.close();
 				break;
-			case sf::Event::EventType::KeyReleased:
-				if (event.key.code == sf::Keyboard::A)
-				{
-
-				}
+			default:
+				handler.HandleEvent(event, window);
 				break;
 			}
 		}

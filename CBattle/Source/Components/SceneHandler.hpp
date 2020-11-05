@@ -3,6 +3,7 @@
 #include <map>
 #include <stack>
 #include "Scene.hpp"
+#include <iostream>
 
 class SceneHandler
 {
@@ -19,4 +20,7 @@ public:
 	void AddScene(Scene& scene);
 	void StackScene(std::string sceneName);
 	void PopScene();
+	std::string GetSceneName();
+
+	void HandleEvent(const sf::Event& event, sf::RenderWindow& window);
 };

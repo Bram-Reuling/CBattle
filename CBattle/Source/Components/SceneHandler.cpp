@@ -37,10 +37,22 @@ void SceneHandler::AddScene(Scene& scene)
 
 void SceneHandler::StackScene(std::string sceneName)
 {
+	std::cout << "Pushed Scene!" << std::endl;
 	this->scenesStack.push(scenes[sceneName]);
 }
 
 void SceneHandler::PopScene()
 {
+	std::cout << "Popped Scene!" << std::endl;
 	this->scenesStack.pop();
+}
+
+std::string SceneHandler::GetSceneName()
+{
+	return this->scenesStack.top()->GetIdentifier();
+}
+
+void SceneHandler::HandleEvent(const sf::Event& event, sf::RenderWindow& window)
+{
+	this->scenesStack.top()->HandleEvent(event, window);
 }

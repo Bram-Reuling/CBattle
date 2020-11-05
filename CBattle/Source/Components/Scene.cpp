@@ -1,8 +1,13 @@
 #include "Scene.hpp"
 
+#include <iostream>
+
 Scene::Scene(std::string identifier) : identifier(identifier)
 {
-	
+	font.loadFromFile("Assets/Fonts/Lato-Regular.ttf");
+	darkColor = sf::Color(71, 82, 94, 255);
+	darkGreyColor = sf::Color(132, 146, 166, 255);
+	lightGreyColor = sf::Color(129, 144, 165, 255);
 }
 
 Scene::~Scene()

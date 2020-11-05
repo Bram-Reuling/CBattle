@@ -149,18 +149,22 @@
   <ItemGroup>
     <ClCompile Include="Source\Components\Button.cpp" />
     <ClCompile Include="Source\Components\GameObject.cpp" />
+    <ClCompile Include="Source\Components\QuitButton.cpp" />
     <ClCompile Include="Source\Components\Scene.cpp" />
     <ClCompile Include="Source\Components\SceneHandler.cpp" />
     <ClCompile Include="Source\Components\SpriteObject.cpp" />
     <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\Scenes\MainMenu.cpp" />
     <ClCompile Include="Source\Scenes\StartScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Components\Button.hpp" />
     <ClInclude Include="Source\Components\GameObject.hpp" />
+    <ClInclude Include="Source\Components\QuitButton.hpp" />
     <ClInclude Include="Source\Components\Scene.hpp" />
     <ClInclude Include="Source\Components\SceneHandler.hpp" />
     <ClInclude Include="Source\Components\SpriteObject.hpp" />
+    <ClInclude Include="Source\Scenes\MainMenu.hpp" />
     <ClInclude Include="Source\Scenes\Scenes.hpp" />
     <ClInclude Include="Source\Scenes\StartScreen.hpp" />
   </ItemGroup>
@@ -169,8 +173,9 @@
     <Image Include="Source\Assets\Backgrounds\Battleground2.png" />
     <Image Include="Source\Assets\Backgrounds\Battleground3.png" />
     <Image Include="Source\Assets\Backgrounds\Battleground4.png" />
-    <Image Include="Source\Assets\head.png" />
-    <Image Include="Source\Assets\head_hurt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Source\Assets\Fonts\Lato-Regular.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

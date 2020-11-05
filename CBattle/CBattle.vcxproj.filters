@@ -36,6 +36,12 @@
     <ClCompile Include="Source\Components\Button.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Components\QuitButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scenes\MainMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Components\Scene.hpp">
@@ -59,14 +65,14 @@
     <ClInclude Include="Source\Components\Button.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Components\QuitButton.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scenes\MainMenu.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Source\Assets\head.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Source\Assets\head_hurt.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Source\Assets\Backgrounds\Battleground1.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -79,5 +85,8 @@
     <Image Include="Source\Assets\Backgrounds\Battleground4.png">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Source\Assets\Fonts\Lato-Regular.ttf" />
   </ItemGroup>
 </Project>
