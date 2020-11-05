@@ -153,6 +153,7 @@
     <ClCompile Include="Source\Components\Scene.cpp" />
     <ClCompile Include="Source\Components\SceneHandler.cpp" />
     <ClCompile Include="Source\Components\SpriteObject.cpp" />
+    <ClCompile Include="Source\Components\TextObject.cpp" />
     <ClCompile Include="Source\Game.cpp" />
     <ClCompile Include="Source\Scenes\MainMenu.cpp" />
     <ClCompile Include="Source\Scenes\StartScreen.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="Source\Components\Scene.hpp" />
     <ClInclude Include="Source\Components\SceneHandler.hpp" />
     <ClInclude Include="Source\Components\SpriteObject.hpp" />
+    <ClInclude Include="Source\Components\TextObject.hpp" />
     <ClInclude Include="Source\Scenes\MainMenu.hpp" />
     <ClInclude Include="Source\Scenes\Scenes.hpp" />
     <ClInclude Include="Source\Scenes\StartScreen.hpp" />
