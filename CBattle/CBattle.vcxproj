@@ -152,14 +152,21 @@
     <ClCompile Include="Source\Components\SceneHandler.cpp" />
     <ClCompile Include="Source\Components\SpriteObject.cpp" />
     <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\Scenes\StartScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Components\GameObject.hpp" />
     <ClInclude Include="Source\Components\Scene.hpp" />
     <ClInclude Include="Source\Components\SceneHandler.hpp" />
     <ClInclude Include="Source\Components\SpriteObject.hpp" />
+    <ClInclude Include="Source\Scenes\Scenes.hpp" />
+    <ClInclude Include="Source\Scenes\StartScreen.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Source\Assets\Backgrounds\Battleground1.png" />
+    <Image Include="Source\Assets\Backgrounds\Battleground2.png" />
+    <Image Include="Source\Assets\Backgrounds\Battleground3.png" />
+    <Image Include="Source\Assets\Backgrounds\Battleground4.png" />
     <Image Include="Source\Assets\head.png" />
     <Image Include="Source\Assets\head_hurt.png" />
   </ItemGroup>

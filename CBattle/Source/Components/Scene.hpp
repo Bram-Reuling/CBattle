@@ -9,6 +9,7 @@ class Scene
 {
 private:
 	const std::string identifier;
+	// List of pointers to the GameObjects
 	std::vector<GameObject*> listOfGameObjects;
 	
 public:

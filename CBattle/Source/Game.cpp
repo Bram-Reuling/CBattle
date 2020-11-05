@@ -10,29 +10,17 @@
 #include "Components/Scene.hpp"
 #include "Components/SpriteObject.hpp"
 #include "Components/SceneHandler.hpp"
+#include "Scenes/Scenes.hpp"
 
 int main()
 {
 	// Setup of window
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "CBattle");
 
-	Scene scene1("scene1");
-
-	SpriteObject sprite1("soldierSprite", "Assets/head.png");
-	sprite1.SetPosition(sf::Vector2f(70.0f, 70.0f));
-	sprite1.SetScale(sf::Vector2f(5.0f, 5.0f));
-	scene1.AddGameObject(sprite1);
-
-	Scene scene2("scene2");
-
-	SpriteObject sprite2("soldierSprite", "Assets/head_hurt.png");
-	sprite2.SetPosition(sf::Vector2f(70.0f, 70.0f));
-	sprite2.SetScale(sf::Vector2f(5.0f, 5.0f));
-	scene2.AddGameObject(sprite2);
+	StartScreen startScreen("StartScreen");
 
 	SceneHandler handler;
-	handler.AddScene(scene1);
-	handler.AddScene(scene2);
+	handler.AddScene(startScreen);
 
 	auto counter = 0;
 	// Check if the window is open.
@@ -50,16 +38,7 @@ int main()
 			case sf::Event::EventType::KeyReleased:
 				if (event.key.code == sf::Keyboard::A)
 				{
-					if (counter == 0)
-					{
-						handler.StackScene("scene2");
-						counter++;
-					}
-					else
-					{
-						handler.PopScene();
-						counter--;
-					}
+
 				}
 				break;
 			}

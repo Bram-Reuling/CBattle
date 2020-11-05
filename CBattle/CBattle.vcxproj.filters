@@ -30,6 +30,9 @@
     <ClCompile Include="Source\Components\SceneHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Scenes\StartScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Components\Scene.hpp">
@@ -44,12 +47,30 @@
     <ClInclude Include="Source\Components\SceneHandler.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Scenes\StartScreen.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Scenes\Scenes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Source\Assets\head.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Source\Assets\head_hurt.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Backgrounds\Battleground1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Backgrounds\Battleground2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Backgrounds\Battleground3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Backgrounds\Battleground4.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
