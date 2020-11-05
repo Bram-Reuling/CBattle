@@ -21,10 +21,10 @@ int main()
 
 	// Scenes setup
 	StartScreen startScreen("StartScreen", window, handler);
-	Scene startScreen2("Test");
+	MainMenu mainMenu("MainMenu", window, handler);
 	
 	handler.AddScene(startScreen);
-	handler.AddScene(startScreen2);
+	handler.AddScene(mainMenu);
 
 	auto counter = 0;
 	// Check if the window is open.

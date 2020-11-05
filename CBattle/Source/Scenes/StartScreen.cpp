@@ -7,7 +7,7 @@ void StartScreen::InitPlayButton(sf::RenderWindow& window)
 
 	playButton->SetButtonAction([this]()
 	{
-		this->handler->StackScene("Test");
+		this->handler->StackScene("MainMenu");
 	});
 	
 	AddGameObject(*playButton);
