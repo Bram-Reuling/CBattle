@@ -5,21 +5,16 @@
 class GameObject
 {
 private:
-	std::string identifier;
+	const std::string identifier;
 	
 public:
 	GameObject(std::string identifier);
-	GameObject(const GameObject& other)
-	{
-		this->identifier = other.GetIdentifier();
-	}
-	~GameObject();
+	GameObject(const GameObject& other);
+
+	virtual ~GameObject();
 	
 public:
-	void Update();
-	void Render(sf::RenderWindow& window);
-	std::string GetIdentifier() const
-	{
-		return this->identifier;
-	}
+	virtual void Update() = 0;
+	virtual  void Render(sf::RenderWindow& window) = 0;
+	std::string GetIdentifier() const;
 };

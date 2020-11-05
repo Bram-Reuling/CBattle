@@ -1,6 +1,11 @@
 #include "GameObject.hpp"
 
-GameObject::GameObject()
+GameObject::GameObject(std::string identifier) : identifier(identifier)
+{
+	
+}
+
+GameObject::GameObject(const GameObject& other) : identifier(other.GetIdentifier())
 {
 	
 }
@@ -10,12 +15,7 @@ GameObject::~GameObject()
 	
 }
 
-void GameObject::Update()
+std::string GameObject::GetIdentifier() const
 {
-
-}
-
-void GameObject::Render(sf::RenderWindow& window)
-{
-	
+	return this->identifier;
 }
