@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Components\Button.cpp" />
     <ClCompile Include="Source\Components\GameObject.cpp" />
     <ClCompile Include="Source\Components\Scene.cpp" />
     <ClCompile Include="Source\Components\SceneHandler.cpp" />
@@ -155,6 +156,7 @@
     <ClCompile Include="Source\Scenes\StartScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Components\Button.hpp" />
     <ClInclude Include="Source\Components\GameObject.hpp" />
     <ClInclude Include="Source\Components\Scene.hpp" />
     <ClInclude Include="Source\Components\SceneHandler.hpp" />

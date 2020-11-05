@@ -33,6 +33,9 @@
     <ClCompile Include="Source\Scenes\StartScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Components\Button.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Components\Scene.hpp">
@@ -51,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\Scenes\Scenes.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\Button.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

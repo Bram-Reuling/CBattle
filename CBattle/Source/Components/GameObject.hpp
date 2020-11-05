@@ -18,6 +18,7 @@ public:
 	virtual ~GameObject();
 	
 public:
+	virtual void HandleEvent(const sf::Event& event, sf::RenderWindow& window) {};
 	// Overridable Update function
 	virtual void Update() = 0;
 	// Overridable Render Function

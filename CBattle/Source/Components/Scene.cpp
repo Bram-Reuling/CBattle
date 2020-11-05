@@ -15,6 +15,15 @@ void Scene::AddGameObject(GameObject &object)
 	this->listOfGameObjects.push_back(&object);
 }
 
+void Scene::HandleEvent(const sf::Event& event, sf::RenderWindow& window)
+{
+	for (unsigned int i = 0; i < this->listOfGameObjects.size(); i++)
+	{
+		this->listOfGameObjects[i]->HandleEvent(event, window);
+	}
+}
+
+
 void Scene::Update()
 {
 	for (unsigned int i = 0; i < this->listOfGameObjects.size(); i++)
