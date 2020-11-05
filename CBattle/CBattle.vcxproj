@@ -155,6 +155,8 @@
     <ClCompile Include="Source\Components\SpriteObject.cpp" />
     <ClCompile Include="Source\Components\TextObject.cpp" />
     <ClCompile Include="Source\Game.cpp" />
+    <ClCompile Include="Source\Scenes\CharacterSelection.cpp" />
+    <ClCompile Include="Source\Scenes\FightScreen.cpp" />
     <ClCompile Include="Source\Scenes\MainMenu.cpp" />
     <ClCompile Include="Source\Scenes\StartScreen.cpp" />
   </ItemGroup>
@@ -166,6 +168,8 @@
     <ClInclude Include="Source\Components\SceneHandler.hpp" />
     <ClInclude Include="Source\Components\SpriteObject.hpp" />
     <ClInclude Include="Source\Components\TextObject.hpp" />
+    <ClInclude Include="Source\Scenes\CharacterSelection.hpp" />
+    <ClInclude Include="Source\Scenes\FightScreen.hpp" />
     <ClInclude Include="Source\Scenes\MainMenu.hpp" />
     <ClInclude Include="Source\Scenes\Scenes.hpp" />
     <ClInclude Include="Source\Scenes\StartScreen.hpp" />

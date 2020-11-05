@@ -22,6 +22,8 @@ int main()
 	// Scenes setup
 	StartScreen startScreen("StartScreen", window, handler);
 	MainMenu mainMenu("MainMenu", window, handler);
+	// Character Selection Screen
+	// Fight Screen
 	
 	handler.AddScene(startScreen);
 	handler.AddScene(mainMenu);
