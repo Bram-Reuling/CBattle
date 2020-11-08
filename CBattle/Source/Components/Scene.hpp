@@ -3,7 +3,7 @@
 #include <string>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/Text.hpp>
-
+#include "SpriteObject.hpp"
 #include "GameObject.hpp"
 
 class Scene
@@ -22,8 +22,11 @@ public:
 	void HandleEvent(const sf::Event& event, sf::RenderWindow& window);
 	void Update();
 	void Render(sf::RenderWindow& window);
+	void Background(std::string spriteFile);
 	std::string GetIdentifier() const;
 
+	GameObject* background;
+	
 	sf::Font font;
 	sf::Color darkColor;
 	sf::Color darkGreyColor;

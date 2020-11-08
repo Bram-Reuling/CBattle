@@ -14,13 +14,12 @@ public:
 private:
 	void Init(SceneHandler& handler);
 	void InitBG();
-	void InitPlayButton(sf::RenderWindow& window);
+	void InitStartButton(sf::RenderWindow& window);
 	void InitQuitButton(sf::RenderWindow& window);
 	
 private:
 	SceneHandler* handler;
 	
-	SpriteObject* background;
 	QuitButton* quitButton;
-	Button* playButton;
+	Button* startButton;
 };

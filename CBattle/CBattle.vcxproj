@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source\Components\Button.cpp" />
+    <ClCompile Include="Source\Components\Character.cpp" />
     <ClCompile Include="Source\Components\GameObject.cpp" />
     <ClCompile Include="Source\Components\QuitButton.cpp" />
     <ClCompile Include="Source\Components\Scene.cpp" />
@@ -162,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Components\Button.hpp" />
+    <ClInclude Include="Source\Components\Character.hpp" />
     <ClInclude Include="Source\Components\GameObject.hpp" />
     <ClInclude Include="Source\Components\QuitButton.hpp" />
     <ClInclude Include="Source\Components\Scene.hpp" />

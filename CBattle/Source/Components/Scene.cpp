@@ -12,14 +12,22 @@ Scene::Scene(std::string identifier) : identifier(identifier)
 
 Scene::~Scene()
 {
-	
 }
 
+/// <summary>
+/// Ads a GameObject to the GameObjects vector
+/// </summary>
+/// <param name="object">A GameObject</param>
 void Scene::AddGameObject(GameObject &object)
 {
 	this->listOfGameObjects.push_back(&object);
 }
 
+/// <summary>
+/// Handles the events of the GameObjects
+/// </summary>
+/// <param name="event"></param>
+/// <param name="window"></param>
 void Scene::HandleEvent(const sf::Event& event, sf::RenderWindow& window)
 {
 	for (unsigned int i = 0; i < this->listOfGameObjects.size(); i++)
@@ -28,7 +36,9 @@ void Scene::HandleEvent(const sf::Event& event, sf::RenderWindow& window)
 	}
 }
 
-
+/// <summary>
+/// Updates the GameObjects
+/// </summary>
 void Scene::Update()
 {
 	for (unsigned int i = 0; i < this->listOfGameObjects.size(); i++)
@@ -37,6 +47,10 @@ void Scene::Update()
 	}
 }
 
+/// <summary>
+/// Renders the GameObjects to the screen
+/// </summary>
+/// <param name="window"></param>
 void Scene::Render(sf::RenderWindow& window)
 {
 	for (unsigned int i = 0; i < this->listOfGameObjects.size(); i++)
@@ -45,7 +59,21 @@ void Scene::Render(sf::RenderWindow& window)
 	}
 }
 
+/// <summary>
+/// Gets the Identifier of this scene
+/// </summary>
+/// <returns></returns>
 std::string Scene::GetIdentifier() const
 {
 	return this->identifier;
+}
+
+/// <summary>
+/// Sets the Background of the scene
+/// </summary>
+/// <param name="spriteFile"></param>
+void Scene::Background(std::string spriteFile)
+{
+	background = new SpriteObject("background", spriteFile);
+	AddGameObject(*background);
 }

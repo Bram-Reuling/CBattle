@@ -16,11 +16,15 @@ private:
 	void InitBG();
 	void InitBackButton(sf::RenderWindow& window);
 	void InitQuitButton(sf::RenderWindow& window);
+	void InitPlayButton(sf::RenderWindow& window);
+	void InitEraseDataButton(sf::RenderWindow& window);
 
 private:
 	SceneHandler* handler;
 
-	SpriteObject* background;
 	QuitButton* quitButton;
+
+	Button* playButton;
 	Button* backButton;
+	Button* eraseData;
 };

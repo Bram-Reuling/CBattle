@@ -22,11 +22,13 @@ int main()
 	// Scenes setup
 	StartScreen startScreen("StartScreen", window, handler);
 	MainMenu mainMenu("MainMenu", window, handler);
-	// Character Selection Screen
-	// Fight Screen
+	CharacterSelection characterSelection("CharacterSelection", window, handler);
+	FightScreen fightScreen("FightScreen", window, handler);
 	
 	handler.AddScene(startScreen);
 	handler.AddScene(mainMenu);
+	handler.AddScene(characterSelection);
+	handler.AddScene(fightScreen);
 
 	auto counter = 0;
 	// Check if the window is open.

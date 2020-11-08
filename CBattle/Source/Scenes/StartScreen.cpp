@@ -1,16 +1,17 @@
 #include "StartScreen.hpp"
 
-void StartScreen::InitPlayButton(sf::RenderWindow& window)
+void StartScreen::InitStartButton(sf::RenderWindow& window)
 {
-	playButton = new Button("playButton", font, "PLAY", sf::Vector2f(192.5f, 50.0f), darkColor);
-	playButton->SetPosition(sf::Vector2f(window.getSize().x / 2.0f - 192.5f / 2.0f, 440.0f));
+	startButton = new Button("startButton", font, "START", sf::Vector2f(192.5f, 50.0f), darkColor);
+	startButton->SetPosition(sf::Vector2f(window.getSize().x / 2.0f - 192.5f / 2.0f, 440.0f));
 
-	playButton->SetButtonAction([this]()
+	startButton->SetButtonAction([this]()
 	{
+		this->handler->PopScene();
 		this->handler->StackScene("MainMenu");
 	});
 	
-	AddGameObject(*playButton);
+	AddGameObject(*startButton);
 }
 
 void StartScreen::Init(SceneHandler& handler)
@@ -20,9 +21,7 @@ void StartScreen::Init(SceneHandler& handler)
 
 void StartScreen::InitBG()
 {
-	// Initialize background
-	background = new SpriteObject("background", "Assets/Backgrounds/Battleground1.png");
-	AddGameObject(*background);
+	Background("Assets/Backgrounds/Battleground1.png");
 }
 
 void StartScreen::InitQuitButton(sf::RenderWindow& window)
@@ -40,12 +39,11 @@ StartScreen::StartScreen(std::string identifier, sf::RenderWindow& window, Scene
 
 	InitQuitButton(window);
 
-	InitPlayButton(window);
+	InitStartButton(window);
 }
 
 StartScreen::~StartScreen()
 {
-	delete background;
 	delete quitButton;
 	delete background;
 }

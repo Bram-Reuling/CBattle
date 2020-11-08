@@ -2,6 +2,8 @@
 
 #include <SFML/Window/Event.hpp>
 
+#pragma region Class Things
+
 Button::Button(std::string identifier, sf::Font& font, std::string buttonText, sf::Vector2f size, sf::Color color) :
 	GameObject(identifier), font(font), buttonText(buttonText)
 {
@@ -31,6 +33,13 @@ Button::~Button()
 	
 }
 
+#pragma endregion 
+
+/// <summary>
+/// Handles the event if the button is clicked
+/// </summary>
+/// <param name="event">A SFML Event</param>
+/// <param name="window">A SFML RenderWindow</param>
 void Button::HandleEvent(const sf::Event& event, sf::RenderWindow& window)
 {
 	// Checks if the left mouse button is pressed
@@ -53,22 +62,37 @@ void Button::HandleEvent(const sf::Event& event, sf::RenderWindow& window)
 	}
 }
 
+/// <summary>
+/// Updates the button
+/// </summary>
 void Button::Update()
 {
 	
 }
 
+/// <summary>
+/// Renders the button to the screen
+/// </summary>
+/// <param name="window">A SFML RenderWindow</param>
 void Button::Render(sf::RenderWindow& window)
 {
 	window.draw(this->shape);
 	window.draw(this->text);
 }
 
+/// <summary>
+/// Sets the text size of the button
+/// </summary>
+/// <param name="size">The size of the text</param>
 void Button::SetCharacterSize(const int size)
 {
 	this->text.setCharacterSize(size);
 }
 
+/// <summary>
+/// Sets the position of the button
+/// </summary>
+/// <param name="position">A SFML Vector2f for the position</param>
 void Button::SetPosition(const sf::Vector2f position)
 {
 	this->shape.setPosition(position);
@@ -77,11 +101,18 @@ void Button::SetPosition(const sf::Vector2f position)
 	this->text.setPosition(centerButton);
 }
 
+/// <summary>
+/// Calls a certain action
+/// </summary>
 void Button::OnClick()
 {
 	this->action();
 }
 
+/// <summary>
+/// Sets the buttons action
+/// </summary>
+/// <param name="action">The action</param>
 void Button::SetButtonAction(std::function<void()> action)
 {
 	this->action = action;
