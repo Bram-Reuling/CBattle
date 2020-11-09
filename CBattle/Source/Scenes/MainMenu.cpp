@@ -75,3 +75,8 @@ void MainMenu::InitEraseDataButton(sf::RenderWindow& window)
 
 	AddGameObject(*eraseData);
 }
+
+void MainMenu::SceneIsActive()
+{
+	std::cout << "Main Menu is active!" << std::endl;
+}

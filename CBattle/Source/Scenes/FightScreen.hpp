@@ -5,6 +5,12 @@
 #include "../Components/QuitButton.hpp"
 #include "../Components/SceneHandler.hpp"
 
+///
+/// Create function for Determining and Setting the turns.
+/// At the beginning of this scene the determine function runs
+/// At button press or turnDone Setting is called
+/// 
+
 class FightScreen : public Scene
 {
 public:
@@ -19,6 +25,8 @@ private:
 	void InitPrepareButton(sf::RenderWindow& window);
 	void InitRecoverButton(sf::RenderWindow& window);
 	void InitCastMagicButton(sf::RenderWindow& window);
+
+	void SceneIsActive() override;
 
 private:
 	SceneHandler* handler;

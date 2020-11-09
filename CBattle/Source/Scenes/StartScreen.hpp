@@ -16,6 +16,8 @@ private:
 	void InitBG();
 	void InitStartButton(sf::RenderWindow& window);
 	void InitQuitButton(sf::RenderWindow& window);
+
+	void SceneIsActive() override;
 	
 private:
 	SceneHandler* handler;

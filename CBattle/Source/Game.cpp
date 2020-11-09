@@ -7,7 +7,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
-
+#include <fstream>
 #include "Components/Scene.hpp"
 #include "Components/SpriteObject.hpp"
 #include "Components/SceneHandler.hpp"
@@ -15,6 +15,17 @@
 
 int main()
 {
+	std::ifstream iconPaths("Assets/SaveFiles/Characters/Player.txt");
+	std::string line;
+	if (!iconPaths.fail())
+	{
+		while(std::getline(iconPaths, line))
+		{
+			std::cout << line.c_str() << std::endl;
+		}
+	}
+	iconPaths.close();
+	
 	// Setup of window
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "CBattle");
 	SceneHandler handler;

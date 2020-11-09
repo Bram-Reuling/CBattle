@@ -18,6 +18,7 @@ public:
 	~Scene();
 
 public:
+	virtual void SceneIsActive();
 	void AddGameObject(GameObject& object);
 	void HandleEvent(const sf::Event& event, sf::RenderWindow& window);
 	void Update();

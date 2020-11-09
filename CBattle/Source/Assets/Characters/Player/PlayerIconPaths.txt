@@ -1,0 +1,9 @@
+Assets/Characters/Player/Icons_01.png
+Assets/Characters/Player/Icons_02.png
+Assets/Characters/Player/Icons_03.png
+Assets/Characters/Player/Icons_13.png
+Assets/Characters/Player/Icons_14.png
+Assets/Characters/Player/Icons_15.png
+Assets/Characters/Player/Icons_16.png
+Assets/Characters/Player/Icons_17.png
+Assets/Characters/Player/Icons_18.png

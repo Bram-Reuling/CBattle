@@ -19,6 +19,8 @@ private:
 	void InitPlayButton(sf::RenderWindow& window);
 	void InitEraseDataButton(sf::RenderWindow& window);
 
+	void SceneIsActive() override;
+
 private:
 	SceneHandler* handler;
 

@@ -13,7 +13,7 @@
 /// <param name="Agility"></param>
 /// <param name="Wits"></param>
 Character::Character(const char* name, const char* textureFile, const int HP, const int SP, const int Strength, const int Agility, const int Wits) :
-	GameObject(name), name(name), textureFile(textureFile), HealthPoints(HP), SanityPoints(SP), StrengthPoints(Strength), AgilityPoints(Agility),
+	SpriteObject(name, textureFile), name(name), textureFile(textureFile), HealthPoints(HP), SanityPoints(SP), StrengthPoints(Strength), AgilityPoints(Agility),
 	WitsPoints(Wits)
 {
 
@@ -25,6 +25,16 @@ Character::Character(const char* name, const char* textureFile, const int HP, co
 Character::~Character()
 {
 
+}
+
+void Character::Render(sf::RenderWindow& window)
+{
+	
+}
+
+void Character::Update()
+{
+	
 }
 
 #pragma endregion

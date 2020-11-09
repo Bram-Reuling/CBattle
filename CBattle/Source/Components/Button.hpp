@@ -31,4 +31,6 @@ public:
 	void SetButtonAction(std::function<void()> action);
 	void SetCharacterSize(const int size);
 	void SetPosition(const sf::Vector2f position);
+
+	void UpdateText(std::string value);
 };

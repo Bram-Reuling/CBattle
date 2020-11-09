@@ -47,3 +47,8 @@ StartScreen::~StartScreen()
 	delete quitButton;
 	delete background;
 }
+
+void StartScreen::SceneIsActive()
+{
+	std::cout << "StartScreen is active!" << std::endl;
+}

@@ -147,12 +147,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Components\BattleSystem.cpp" />
     <ClCompile Include="Source\Components\Button.cpp" />
     <ClCompile Include="Source\Components\Character.cpp" />
     <ClCompile Include="Source\Components\GameObject.cpp" />
     <ClCompile Include="Source\Components\QuitButton.cpp" />
     <ClCompile Include="Source\Components\Scene.cpp" />
     <ClCompile Include="Source\Components\SceneHandler.cpp" />
+    <ClCompile Include="Source\Components\SpriteButton.cpp" />
     <ClCompile Include="Source\Components\SpriteObject.cpp" />
     <ClCompile Include="Source\Components\TextObject.cpp" />
     <ClCompile Include="Source\Game.cpp" />
@@ -162,12 +164,14 @@
     <ClCompile Include="Source\Scenes\StartScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Components\BattleSystem.hpp" />
     <ClInclude Include="Source\Components\Button.hpp" />
     <ClInclude Include="Source\Components\Character.hpp" />
     <ClInclude Include="Source\Components\GameObject.hpp" />
     <ClInclude Include="Source\Components\QuitButton.hpp" />
     <ClInclude Include="Source\Components\Scene.hpp" />
     <ClInclude Include="Source\Components\SceneHandler.hpp" />
+    <ClInclude Include="Source\Components\SpriteButton.hpp" />
     <ClInclude Include="Source\Components\SpriteObject.hpp" />
     <ClInclude Include="Source\Components\TextObject.hpp" />
     <ClInclude Include="Source\Scenes\CharacterSelection.hpp" />
@@ -181,9 +185,54 @@
     <Image Include="Source\Assets\Backgrounds\Battleground2.png" />
     <Image Include="Source\Assets\Backgrounds\Battleground3.png" />
     <Image Include="Source\Assets\Backgrounds\Battleground4.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_04.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_05.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_06.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_07.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_08.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_09.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_10.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_11.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_12.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_19.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_20.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_21.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_22.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_23.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_24.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_25.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_26.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_27.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_28.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_29.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_30.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_31.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_32.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_33.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_34.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_35.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_36.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_37.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_38.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_39.png" />
+    <Image Include="Source\Assets\Characters\Opponents\Icons_40.png" />
+    <Image Include="Source\Assets\Characters\Player\Icons_01.png" />
+    <Image Include="Source\Assets\Characters\Player\Icons_02.png" />
+    <Image Include="Source\Assets\Characters\Player\Icons_03.png" />
+    <Image Include="Source\Assets\Characters\Player\Icons_13.png" />
+    <Image Include="Source\Assets\Characters\Player\Icons_14.png" />
+    <Image Include="Source\Assets\Characters\Player\Icons_15.png" />
+    <Image Include="Source\Assets\Characters\Player\Icons_16.png" />
+    <Image Include="Source\Assets\Characters\Player\Icons_17.png" />
+    <Image Include="Source\Assets\Characters\Player\Icons_18.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="Source\Assets\Fonts\Lato-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Source\Assets\Characters\Opponents\OpponentIconPaths.txt" />
+    <Text Include="Source\Assets\Characters\Player\PlayerIconPaths.txt" />
+    <Text Include="Source\Assets\SaveFiles\Characters\Player.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

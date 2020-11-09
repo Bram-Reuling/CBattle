@@ -1,7 +1,7 @@
 #pragma once
-#include "GameObject.hpp"
+#include "SpriteObject.hpp"
 
-class Character : public GameObject
+class Character : public SpriteObject
 {
 private:
 	std::string const name;
@@ -17,6 +17,9 @@ public:
 	Character(const char* name, const char* textureFile, const int HP, const int SP, const int Strength, const int Agility, const int Wits);
 	~Character();
 
+	void Update() override;
+	void Render(sf::RenderWindow& window) override;
+	
 	// Getters
 	std::string GetName() const;
 	std::string GetTextureFile() const;

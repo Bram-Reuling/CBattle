@@ -77,3 +77,8 @@ void Scene::Background(std::string spriteFile)
 	background = new SpriteObject("background", spriteFile);
 	AddGameObject(*background);
 }
+
+void Scene::SceneIsActive()
+{
+	
+}

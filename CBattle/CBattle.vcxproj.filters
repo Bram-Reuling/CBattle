@@ -54,6 +54,12 @@
     <ClCompile Include="Source\Components\Character.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Components\BattleSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\SpriteButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Components\Scene.hpp">
@@ -95,6 +101,12 @@
     <ClInclude Include="Source\Components\Character.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Components\BattleSystem.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\SpriteButton.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Source\Assets\Backgrounds\Battleground1.png">
@@ -109,8 +121,133 @@
     <Image Include="Source\Assets\Backgrounds\Battleground4.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_04.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_05.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_06.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_07.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_08.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_09.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_10.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_11.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_12.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_19.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_20.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_21.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_22.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_23.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_25.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_26.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_27.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_28.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_29.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_30.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_31.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_32.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_33.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_34.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_35.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_36.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_37.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_38.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_39.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Opponents\Icons_40.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Player\Icons_01.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Player\Icons_02.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Player\Icons_03.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Player\Icons_13.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Player\Icons_14.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Player\Icons_15.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Player\Icons_16.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Player\Icons_17.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Source\Assets\Characters\Player\Icons_18.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Source\Assets\Fonts\Lato-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Source\Assets\SaveFiles\Characters\Player.txt" />
+    <Text Include="Source\Assets\Characters\Opponents\OpponentIconPaths.txt" />
+    <Text Include="Source\Assets\Characters\Player\PlayerIconPaths.txt" />
   </ItemGroup>
 </Project>

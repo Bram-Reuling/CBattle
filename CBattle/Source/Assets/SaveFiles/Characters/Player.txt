@@ -1,0 +1,9 @@
+Noob
+Assets/Characters/Player/Icons_01.png
+12
+6
+4
+1
+3
+0
+8

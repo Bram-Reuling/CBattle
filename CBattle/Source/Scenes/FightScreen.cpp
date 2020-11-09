@@ -35,3 +35,7 @@ void FightScreen::InitBackButton(sf::RenderWindow& window)
 
 	AddGameObject(*backButton);
 }
+void FightScreen::SceneIsActive()
+{
+	std::cout << "Fight scene is active!" << std::endl;
+}

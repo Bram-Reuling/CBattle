@@ -117,3 +117,8 @@ void Button::SetButtonAction(std::function<void()> action)
 {
 	this->action = action;
 }
+
+void Button::UpdateText(std::string value)
+{
+	this->text.setString(value);
+}

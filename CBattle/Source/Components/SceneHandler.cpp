@@ -39,6 +39,7 @@ void SceneHandler::StackScene(std::string sceneName)
 {
 	std::cout << "Pushed Scene!" << std::endl;
 	this->scenesStack.push(scenes[sceneName]);
+	this->scenesStack.top()->SceneIsActive();
 }
 
 void SceneHandler::PopScene()
