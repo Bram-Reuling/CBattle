@@ -1,14 +1,8 @@
 #include "SceneHandler.hpp"
 
-SceneHandler::SceneHandler()
-{
-	
-}
+SceneHandler::SceneHandler() = default;
 
-SceneHandler::~SceneHandler()
-{
-	
-}
+SceneHandler::~SceneHandler() = default;
 
 void SceneHandler::Render(sf::RenderWindow& window) const
 {

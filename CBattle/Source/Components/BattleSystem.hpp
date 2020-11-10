@@ -9,7 +9,7 @@ public:
 	Character* player;
 	Character* opponent;
 
-	BattleSystem(const Character& player);
+	BattleSystem(Character* player, Character* opponent);
 	~BattleSystem();
 
 	void CreateRandomOpponent();

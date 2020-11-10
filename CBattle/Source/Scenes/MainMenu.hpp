@@ -4,12 +4,13 @@
 #include "../Components/Button.hpp"
 #include "../Components/QuitButton.hpp"
 #include "../Components/SceneHandler.hpp"
+#include <memory>
 
 class MainMenu : public Scene
 {
 public:
 	MainMenu(std::string identifier, sf::RenderWindow& window, SceneHandler& handler);
-	~MainMenu();
+	~MainMenu() override;
 
 private:
 	void Init(SceneHandler& handler);
@@ -22,11 +23,11 @@ private:
 	void SceneIsActive() override;
 
 private:
-	SceneHandler* handler;
+	SceneHandler* handler{};
 
-	QuitButton* quitButton;
+	std::unique_ptr<QuitButton> quitButton;
 
-	Button* playButton;
-	Button* backButton;
-	Button* eraseData;
+	std::unique_ptr<Button> playButton;
+	std::unique_ptr<Button> backButton;
+	std::unique_ptr<Button> eraseData;
 };

@@ -1,8 +1,9 @@
 #include "Scene.hpp"
 
 #include <iostream>
+#include <utility>
 
-Scene::Scene(std::string identifier) : identifier(identifier)
+Scene::Scene(std::string identifier) : identifier(std::move(identifier))
 {
 	font.loadFromFile("Assets/Fonts/Lato-Regular.ttf");
 	darkColor = sf::Color(71, 82, 94, 255);
@@ -10,9 +11,7 @@ Scene::Scene(std::string identifier) : identifier(identifier)
 	lightGreyColor = sf::Color(129, 144, 165, 255);
 }
 
-Scene::~Scene()
-{
-}
+Scene::~Scene() = default;
 
 /// <summary>
 /// Ads a GameObject to the GameObjects vector
@@ -74,7 +73,7 @@ std::string Scene::GetIdentifier() const
 /// <param name="spriteFile"></param>
 void Scene::Background(std::string spriteFile)
 {
-	background = new SpriteObject("background", spriteFile);
+	background = new SpriteObject("background", std::move(spriteFile));
 	AddGameObject(*background);
 }
 

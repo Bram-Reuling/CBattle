@@ -232,7 +232,7 @@
   <ItemGroup>
     <Text Include="Source\Assets\Characters\Opponents\OpponentIconPaths.txt" />
     <Text Include="Source\Assets\Characters\Player\PlayerIconPaths.txt" />
-    <Text Include="Source\Assets\SaveFiles\Characters\Player.txt" />
+    <Text Include="Source\Assets\SaveFiles\Characters\Player.cmgt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

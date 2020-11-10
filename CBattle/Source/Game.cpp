@@ -6,29 +6,19 @@
 ///
 
 #include <SFML/Graphics.hpp>
-#include <vector>
-#include <fstream>
 #include "Components/Scene.hpp"
-#include "Components/SpriteObject.hpp"
 #include "Components/SceneHandler.hpp"
 #include "Scenes/Scenes.hpp"
 
 int main()
-{
-	std::ifstream iconPaths("Assets/SaveFiles/Characters/Player.txt");
-	std::string line;
-	if (!iconPaths.fail())
-	{
-		while(std::getline(iconPaths, line))
-		{
-			std::cout << line.c_str() << std::endl;
-		}
-	}
-	iconPaths.close();
-	
+{	
 	// Setup of window
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "CBattle");
 	SceneHandler handler;
+
+	sf::Image icon;
+	icon.loadFromFile("Assets/Characters/Player/Icons_01.png");
+	window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
 	// Scenes setup
 	StartScreen startScreen("StartScreen", window, handler);

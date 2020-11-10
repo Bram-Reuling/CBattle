@@ -246,8 +246,8 @@
     <Font Include="Source\Assets\Fonts\Lato-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Source\Assets\SaveFiles\Characters\Player.txt" />
     <Text Include="Source\Assets\Characters\Opponents\OpponentIconPaths.txt" />
     <Text Include="Source\Assets\Characters\Player\PlayerIconPaths.txt" />
+    <Text Include="Source\Assets\SaveFiles\Characters\Player.cmgt" />
   </ItemGroup>
 </Project>

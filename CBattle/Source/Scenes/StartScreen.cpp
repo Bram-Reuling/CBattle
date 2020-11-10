@@ -2,7 +2,7 @@
 
 void StartScreen::InitStartButton(sf::RenderWindow& window)
 {
-	startButton = new Button("startButton", font, "START", sf::Vector2f(192.5f, 50.0f), darkColor);
+	startButton = std::make_unique<Button>("startButton", font, "START", sf::Vector2f(192.5f, 50.0f), darkColor);
 	startButton->SetPosition(sf::Vector2f(window.getSize().x / 2.0f - 192.5f / 2.0f, 440.0f));
 
 	startButton->SetButtonAction([this]()
@@ -14,9 +14,9 @@ void StartScreen::InitStartButton(sf::RenderWindow& window)
 	AddGameObject(*startButton);
 }
 
-void StartScreen::Init(SceneHandler& handler)
+void StartScreen::Init(SceneHandler& handler_)
 {
-	this->handler = &handler;
+	this->handler = &handler_;
 }
 
 void StartScreen::InitBG()
@@ -26,7 +26,7 @@ void StartScreen::InitBG()
 
 void StartScreen::InitQuitButton(sf::RenderWindow& window)
 {
-	quitButton = new QuitButton("quitButton", font, "QUIT", sf::Vector2f(192.5f, 50.0f), darkColor, window);
+	quitButton = std::make_unique<QuitButton>("quitButton", font, "QUIT", sf::Vector2f(192.5f, 50.0f), darkColor, window);
 	quitButton->SetPosition(sf::Vector2f(window.getSize().x/2.0f - 192.5f/2.0f, 540.0f));
 	AddGameObject(*quitButton);
 }
@@ -42,11 +42,7 @@ StartScreen::StartScreen(std::string identifier, sf::RenderWindow& window, Scene
 	InitStartButton(window);
 }
 
-StartScreen::~StartScreen()
-{
-	delete quitButton;
-	delete background;
-}
+StartScreen::~StartScreen() = default;
 
 void StartScreen::SceneIsActive()
 {

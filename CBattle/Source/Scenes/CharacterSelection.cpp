@@ -1,5 +1,4 @@
 #include "CharacterSelection.hpp"
-// TODO: Implement Randomize button and Play button.
 
 CharacterSelection::CharacterSelection(std::string identifier, sf::RenderWindow& window, SceneHandler& handler) : Scene(std::move(identifier))
 {
@@ -17,19 +16,11 @@ CharacterSelection::CharacterSelection(std::string identifier, sf::RenderWindow&
 	
 }
 
-CharacterSelection::~CharacterSelection()
-{
-	delete backButton;
-	delete randomizeButton;
-	delete playButton;
-	delete strengthButton;
-	delete agilityButton;
-	delete witsButton;
-}
+CharacterSelection::~CharacterSelection() = default;
 
-void CharacterSelection::Init(SceneHandler& handler)
+void CharacterSelection::Init(SceneHandler& handler_)
 {
-	this->handler = &handler;
+	this->handler = &handler_;
 }
 
 void CharacterSelection::InitBG()
@@ -39,7 +30,7 @@ void CharacterSelection::InitBG()
 
 void CharacterSelection::InitBackButton(sf::RenderWindow& window)
 {
-	backButton = new Button("backButton", font, "BACK", sf::Vector2f(192.5f, 50.0f), darkColor);
+	backButton = std::make_unique<Button>("backButton", font, "BACK", sf::Vector2f(192.5f, 50.0f), darkColor);
 	backButton->SetPosition(sf::Vector2f(window.getSize().x / 2.0f - 392.5f, 540.0f));
 
 	backButton->SetButtonAction([this]()
@@ -53,7 +44,7 @@ void CharacterSelection::InitBackButton(sf::RenderWindow& window)
 
 void CharacterSelection::InitRandomizeButton(sf::RenderWindow& window)
 {
-	randomizeButton = new Button("randomizeButton", font, "RANDOMIZE", sf::Vector2f(192.5f, 50.0f), darkColor);
+	randomizeButton = std::make_unique<Button>("randomizeButton", font, "RANDOMIZE", sf::Vector2f(192.5f, 50.0f), darkColor);
 	randomizeButton->SetPosition(sf::Vector2f(window.getSize().x / 2.0f - 192.5f / 2.0f, 540.0f));
 
 	randomizeButton->SetButtonAction([this]()
@@ -86,7 +77,7 @@ void CharacterSelection::InitRandomizeButton(sf::RenderWindow& window)
 
 void CharacterSelection::InitPlayButton(sf::RenderWindow& window)
 {
-	playButton = new Button("playButton", font, "PLAY", sf::Vector2f(192.5f, 50.0f), darkColor);
+	playButton = std::make_unique<Button>("playButton", font, "PLAY", sf::Vector2f(192.5f, 50.0f), darkColor);
 	playButton->SetPosition(sf::Vector2f(window.getSize().x / 2.0f + 192.5f, 540.0f));
 
 	playButton->SetButtonAction([this]()
@@ -101,7 +92,7 @@ void CharacterSelection::InitPlayButton(sf::RenderWindow& window)
 
 void CharacterSelection::InitStrengthButton(sf::RenderWindow& window)
 {
-	strengthButton = new Button("strengthButton", font, std::to_string(Strength), sf::Vector2f(192.5f, 50.0f), darkColor);
+	strengthButton = std::make_unique<Button>("strengthButton", font, std::to_string(Strength), sf::Vector2f(192.5f, 50.0f), darkColor);
 	strengthButton->SetPosition(sf::Vector2f(window.getSize().x / 2.0f - 392.5f, 340.0f));
 
 	strengthButton->SetButtonAction([this]()
@@ -120,7 +111,7 @@ void CharacterSelection::InitStrengthButton(sf::RenderWindow& window)
 
 void CharacterSelection::InitAgilityButton(sf::RenderWindow& window)
 {
-	agilityButton = new Button("agilityButton", font, std::to_string(Agility), sf::Vector2f(192.5f, 50.0f), darkColor);
+	agilityButton = std::make_unique<Button>("agilityButton", font, std::to_string(Agility), sf::Vector2f(192.5f, 50.0f), darkColor);
 	agilityButton->SetPosition(sf::Vector2f(window.getSize().x / 2.0f - 192.5f / 2.0f, 340.0f));
 
 	agilityButton->SetButtonAction([this]()
@@ -139,7 +130,7 @@ void CharacterSelection::InitAgilityButton(sf::RenderWindow& window)
 
 void CharacterSelection::InitWitsButton(sf::RenderWindow& window)
 {
-	witsButton = new Button("witsButton", font, std::to_string(Wits), sf::Vector2f(192.5f, 50.0f), darkColor);
+	witsButton = std::make_unique<Button>("witsButton", font, std::to_string(Wits), sf::Vector2f(192.5f, 50.0f), darkColor);
 	witsButton->SetPosition(sf::Vector2f(window.getSize().x / 2.0f + 192.5f, 340.0f));
 
 	witsButton->SetButtonAction([this]()
@@ -160,7 +151,7 @@ void CharacterSelection::SceneIsActive()
 {
 	std::cout << "Char select is active!" << std::endl;
 	
-	std::ifstream playerPath("Assets/SaveFiles/Characters/Player.txt");
+	std::ifstream playerPath("Assets/SaveFiles/Characters/Player.cmgt");
 	std::string line;
 
 	if (!playerPath.fail())
@@ -205,7 +196,7 @@ void CharacterSelection::SavePlayer()
 	CalculateHealth();
 	CalculateSanity();
 	
-	std::ofstream playerPath("Assets/SaveFiles/Characters/Player.txt");
+	std::ofstream playerPath("Assets/SaveFiles/Characters/Player.cmgt");
 	if (!playerPath.fail())
 	{
 		playerPath << this->name << "\n";
@@ -224,10 +215,10 @@ void CharacterSelection::SavePlayer()
 
 void CharacterSelection::CalculateHealth()
 {
-	HP = 3 * Strength;
+	HP = 15 * Strength;
 }
 
 void CharacterSelection::CalculateSanity()
 {
-	SP = 2 * Wits;
+	SP = 9 * Wits;
 }

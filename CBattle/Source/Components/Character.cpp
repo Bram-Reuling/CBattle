@@ -12,7 +12,7 @@
 /// <param name="Strength"></param>
 /// <param name="Agility"></param>
 /// <param name="Wits"></param>
-Character::Character(const char* name, const char* textureFile, const int HP, const int SP, const int Strength, const int Agility, const int Wits) :
+Character::Character(const std::string name, const std::string textureFile, const int HP, const int SP, const int Strength, const int Agility, const int Wits) :
 	SpriteObject(name, textureFile), name(name), textureFile(textureFile), HealthPoints(HP), SanityPoints(SP), StrengthPoints(Strength), AgilityPoints(Agility),
 	WitsPoints(Wits)
 {
@@ -29,7 +29,7 @@ Character::~Character()
 
 void Character::Render(sf::RenderWindow& window)
 {
-	
+	window.draw(sprite);
 }
 
 void Character::Update()

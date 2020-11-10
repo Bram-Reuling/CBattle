@@ -5,6 +5,7 @@
 #include <SFML/Graphics/Text.hpp>
 #include "SpriteObject.hpp"
 #include "GameObject.hpp"
+#include <memory>
 
 class Scene
 {
@@ -15,7 +16,7 @@ private:
 	
 public:
 	Scene(std::string identifier);
-	~Scene();
+	virtual ~Scene();
 
 public:
 	virtual void SceneIsActive();

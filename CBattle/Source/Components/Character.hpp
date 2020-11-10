@@ -1,5 +1,6 @@
 #pragma once
 #include "SpriteObject.hpp"
+#include <iostream>
 
 class Character : public SpriteObject
 {
@@ -14,7 +15,7 @@ private:
 	int AgilityPoints;
 	int WitsPoints;
 public:
-	Character(const char* name, const char* textureFile, const int HP, const int SP, const int Strength, const int Agility, const int Wits);
+	Character(const std::string name, const std::string textureFile, const int HP, const int SP, const int Strength, const int Agility, const int Wits);
 	~Character();
 
 	void Update() override;

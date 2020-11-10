@@ -6,16 +6,16 @@
 #include "../Components/TextObject.hpp"
 #include "../Components/SceneHandler.hpp"
 #include <fstream>
-#include <sstream>
+#include <memory>
 
 class CharacterSelection : public Scene
 {
 public:
 	CharacterSelection(std::string identifier, sf::RenderWindow& window, SceneHandler& handler);
-	~CharacterSelection();
+	~CharacterSelection() override;
 
 private:
-	void Init(SceneHandler& handler);
+	void Init(SceneHandler& handler_);
 	void InitBG();
 	void InitBackButton(sf::RenderWindow& window);
 	void InitRandomizeButton(sf::RenderWindow& window);
@@ -32,18 +32,18 @@ private:
 	void SavePlayer();
 
 	SceneHandler* handler;
-	Button* backButton;
+	
+	std::unique_ptr<Button> backButton;
+	std::unique_ptr<Button> randomizeButton;
+	std::unique_ptr<Button> playButton;
 
-	Button* randomizeButton;
-	Button* playButton;
+	std::unique_ptr<Button> strengthButton;
+	std::unique_ptr<Button> agilityButton;
+	std::unique_ptr<Button> witsButton;
 
-	Button* strengthButton;
-	Button* agilityButton;
-	Button* witsButton;
-
-	TextObject* strengthText;
-	TextObject* agilityText;
-	TextObject* witsText;
+	std::unique_ptr<TextObject> strengthText;
+	std::unique_ptr<TextObject> agilityText;
+	std::unique_ptr<TextObject> witsText;
 
 	// Character
 	std::string name;

@@ -1,5 +1,7 @@
 #include "SpriteObject.hpp"
 
+#include <iostream>
+
 SpriteObject::SpriteObject(std::string identifier, std::string spriteFile) : GameObject(identifier), spriteFile(spriteFile)
 {
 	this->texture.loadFromFile(this->spriteFile);
